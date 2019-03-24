@@ -42,6 +42,14 @@
             -webkit-transform: scale(1.1);
             transform: scale(1.1);
         }
+        .btn-all {
+            background-image: unset;
+            border: unset;
+            border-radius: unset;
+        }
+        .btn-num {
+            padding: 20px 0;
+        }
     </style>
     <body>
         <div style="min-height:100%;">
@@ -59,7 +67,7 @@
                                         <div class="row" style="padding-top:15px;">
                                             <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-6" aria-expanded="true" style="font-size:10px;float:right;">
                                                 <ul class="nav navbar-nav">
-                                                    <li role="presentation"><a href="" style="color:white;">HOME</a></li>
+                                                    <li role="presentation"><a href="index.html" style="color:white;">HOME</a></li>
                                                     <li role="presentation" class="dropdown">
                                                         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:white;">PROJECT</a>
                                                         <ul class="dropdown-menu">
@@ -79,7 +87,7 @@
                     </div>
                 
                     <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
+                    <div class="carousel-inner" role="listbox" style="height: 300px;">
                         <div class="item active">
                             <img src="img/hero-bg.jpg" alt="1" style="height:760px;width:100%;">
                         </div>
@@ -100,28 +108,69 @@
                 </div>
             </div>
             <div style="background:#f1f1f1;">
-                <div class="container">
-                    <div class="col-md-4" style="margin-top:18px;padding-right: unset;">
-                        <div class="zoom-hover" style="margin-top: 20px;">
-                            <img src="img/liberty.jpg" style="width: 100%;height: 340px;object-fit: cover;">
+                <div class="container" style="padding-bottom:30px;">
+                    <div class="col-md-12" style="margin:18px 0 30px;">
+                        <center>
+                            <h1><b>PROJECT CALCULATOR</b></h1>
+                        </center>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-md-12">
+                                    <div style="padding:10px;margin: 10px 0;background: burlywood;">
+                                        <span id="hasil2">0</span></br></br>
+                                        <span id="hasil1">0</span>
+                                    </div>
+                                </div>   
+                            </div>
+                            <div class="col-md-8" style="padding-right: unset;">
+                                <div class="col-md-4" style="margin-bottom:10px;padding-right: unset;"><button class="btn btn-primary btn-block btn-num btn-all" onclick="pencet(1);hasil();" type="button" value="1">1</button></div>
+                                <div class="col-md-4" style="margin-bottom:10px;padding-right: unset;"><button class="btn btn-primary btn-block btn-num btn-all" onclick="pencet(2);hasil();" type="button" value="2">2</button></div>
+                                <div class="col-md-4" style="margin-bottom:10px;padding-right: unset;"><button class="btn btn-primary btn-block btn-num btn-all" onclick="pencet(3);hasil();" type="button" value="3">3</button></div>
+                                <div class="col-md-4" style="margin-bottom:10px;padding-right: unset;"><button class="btn btn-primary btn-block btn-num btn-all" onclick="pencet(4);hasil();" type="button" value="4">4</button></div>
+                                <div class="col-md-4" style="margin-bottom:10px;padding-right: unset;"><button class="btn btn-primary btn-block btn-num btn-all" onclick="pencet(5);hasil();" type="button" value="5">5</button></div>
+                                <div class="col-md-4" style="margin-bottom:10px;padding-right: unset;"><button class="btn btn-primary btn-block btn-num btn-all" onclick="pencet(6);hasil();" type="button" value="6">6</button></div>
+                                <div class="col-md-4" style="margin-bottom:10px;padding-right: unset;"><button class="btn btn-primary btn-block btn-num btn-all" onclick="pencet(7);hasil();" type="button" value="7">7</button></div>
+                                <div class="col-md-4" style="margin-bottom:10px;padding-right: unset;"><button class="btn btn-primary btn-block btn-num btn-all" onclick="pencet(8);hasil();" type="button" value="8">8</button></div>
+                                <div class="col-md-4" style="margin-bottom:10px;padding-right: unset;"><button class="btn btn-primary btn-block btn-num btn-all" onclick="pencet(9);hasil();" type="button" value="9">9</button></div>
+                                <div class="col-md-4" style="margin-bottom:10px;padding-right: unset;"><button class="btn btn-primary btn-block btn-num btn-all" onclick="pencet('.');hasil();" type="button" value=".">.</button></div>
+                                <div class="col-md-4" style="margin-bottom:10px;padding-right: unset;"><button class="btn btn-primary btn-block btn-num btn-all" onclick="pencet(0);hasil();" type="button" value="0">0</button></div>
+                                <div class="col-md-4" style="margin-bottom:10px;padding-right: unset;"><button class="btn btn-primary btn-block btn-num btn-all" onclick="hasil()" type="button">=</button></div>
+                                <div class="col-md-12" style="margin-bottom:10px;padding-right: unset;"><button class="btn btn-danger btn-block btn-all" onclick="clears()" type="button">CA</button></div>
+                            </div>
+                            <div class="col-md-4" style="padding-left: unset;">
+                                <div class="col-md-12" style="margin-bottom:10px;"><button class="btn btn-success btn-block btn-num btn-all" onclick="fungsi('+')" type="button">+</button></div>
+                                <div class="col-md-12" style="margin-bottom:10px;"><button class="btn btn-success btn-block btn-num btn-all" onclick="fungsi('-')" type="button">-</button></div>
+                                <div class="col-md-12" style="margin-bottom:10px;"><button class="btn btn-success btn-block btn-num btn-all" onclick="fungsi('*')" type="button">*</button></div>
+                                <div class="col-md-12" style="margin-bottom:10px;"><button class="btn btn-success btn-block btn-num btn-all" onclick="fungsi('/')" type="button">/</button></div>
+                                <div class="col-md-12" style="margin-bottom:10px;"><button class="btn btn-danger btn-block btn-all" onclick="backspace()" type="button">Backspace</button></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-xs-12" style="margin-top:18px;">
-                        <div style="float:left;">
-                            <h3>WHAT WE</h3>
-                            <h2 style="margin-top:-10px;"><b>DO</b></h2>
-                            <p style="text-align:justify;font-size:13.2px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat,<br><br> 
-    
-                            facilisis ut venenatis eu, sodales vel dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-xs-12" style="margin-top:18px;">
-                        <div style="float:left;margin-left:25px;">
-                            <h3 class="text-right" style="margin-top:35px;margin-bottom:2px;color:red;">ABOUT US</h3>
-                            <p class="text-right" style="color:red;"><small><b>https://github.com/utomoadito</b></small></p>
-                            <p style="text-align:justify;font-size:13.2px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat,<br><br> 
-    
-                            facilisis ut venenatis eu, sodales vel dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
+                    <div class="col-md-6" style="font-family: 'Comic Sans MS', cursive, sans-serif;">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-md-12">
+                                    <h2>Explaination About Project</h2>
+                                </div>   
+                                <div class="col-md-12">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, 
+                                            vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. 
+                                            Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, 
+                                            vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. 
+                                            Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, 
+                                            vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. 
+                                            Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, 
+                                            vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. 
+                                            Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.
+                                        </p>
+                                </div>   
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -252,7 +301,7 @@
                                     <div style="margin-top:20px;color:#dddd;">
                                         <small>Stay informed on our latest news!</small>
                                         <div class="input-group">
-                                           <span class="input-group-addon btn-default"><i class=" glyphicon glyphicon-send"></i></span>
+                                           <span class="input-group-addon btn-primary"><i class=" glyphicon glyphicon-send"></i></span>
                                           <input type="text" class="form-control" placeholder="Enter your email" style="height:36px;">
                                           <span class="input-group-addon btn btn-info" style="font-size:10px;color:white;"><b>SUBSCRIBE</b></span>
                                         </div>
@@ -308,4 +357,38 @@
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        function pencet(nilai){
+            // var label = document.getElementById('hasil1').innerHTML;
+            // var format_label = parseInt(label+nilai)
+            // document.getElementById('hasil1').innerHTML = format_label;
+            var label = document.getElementById('hasil1').innerHTML;
+            if(label == 0){
+                document.getElementById('hasil1').innerHTML = nilai;
+            }else{
+                document.getElementById('hasil1').innerHTML += nilai;
+            }
+        }
+        function fungsi(nilai){
+            // console.log(nilai);
+            var label = document.getElementById('hasil1').innerHTML;
+            document.getElementById('hasil1').innerHTML = label+nilai;
+        }
+        function hasil(){
+            var label = document.getElementById('hasil1').innerHTML;
+            document.getElementById('hasil2').innerHTML = eval(label);
+        }
+        function clears(){
+            document.getElementById('hasil2').innerHTML = 0;
+            document.getElementById('hasil1').innerHTML = 0;
+            // document.querySelector('span').textContent = 0;
+        }
+        function backspace(){
+            var label = document.getElementById('hasil1').innerHTML;
+            document.getElementById('hasil1').innerHTML = label.substr(0, label.length - 1); //kalau 0 ditingkatkan maka angka yg dikurang dimulai dari kiri
+            if (label.length == 1){
+                document.getElementById('hasil1').innerHTML = 0;
+            }
+        }
+    </script>
 </html>
