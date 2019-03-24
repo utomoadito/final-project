@@ -11,6 +11,7 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
     </head>
     <style>
         a {
@@ -49,6 +50,11 @@
         }
         .btn-num {
             padding: 20px 0;
+        }
+        .img-gallery {
+            cursor: pointer;
+            width:100%;
+            height: 160px;
         }
     </style>
     <body>
@@ -111,62 +117,76 @@
                 <div class="container" style="padding-bottom:30px;">
                     <div class="col-md-12" style="margin:18px 0 30px;">
                         <center>
-                            <h1><b>CONTACT US</b></h1>
+                            <h1><b>OUR GALLERY</b></h1>
                         </center>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="col-md-12">
-                                    <form action="https://formspree.io/utomoadhitya@gmail.com" method="POST">
-                                        <div class="form-group">
-                                            <label for="name">Name</label>
-                                            <input class="form-control" type="text" id="name" name="name" placeholder="Fill this field" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="address">Address</label>
-                                            <textarea class="form-control" name="address" id="address" placeholder="Fill this field" required>Tabanan</textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="email">Email</label>
-                                            <input class="form-control" type="email" id="email" name="email" placeholder="Fill this field" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="phone">Phone</label>
-                                            <input class="form-control" type="number" id="phone" name="phone" placeholder="Fill this field" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="gender">Gender</label>
-                                            <div class="radio">
-                                                <label>
-                                                <input type="radio" name="gender" value="1" required> Men
-                                                </label>
-                                            </div>
-                                            <div class="radio">
-                                                <label>
-                                                <input type="radio" name="gender" value="0" required> Woman
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="country">Country</label>
-                                            <select class="form-control" name="country" id="country" required>
-                                                <option value="id">Indonesia</option>
-                                                <option value="us">USA</option>
-                                                <option value="ar">Arab</option>
-                                            </select>
-                                        </div>
-                                        <button class="btn btn-success btn-block" type="button" data-toggle="modal" data-target="#myModal">Submit</button>
-                                    </form>
+                                <div class="col-md-3">
+                                    <div class="zoom-hover">
+                                        <a href="img/g-fuji.jpg" data-toggle="lightbox" data-gallery="example-gallery" data-max-width="600">
+                                            <img src="img/g-fuji.jpg" class="img-gallery">
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="col-md-3">
+                                    <div class="zoom-hover">
+                                        <a href="img/g-lamp.jpg" data-toggle="lightbox" data-gallery="example-gallery" data-max-width="600">
+                                            <img src="img/g-lamp.jpg" class="img-gallery">
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="col-md-3">
+                                    <div class="zoom-hover">
+                                        <a href="img/g-salad.jpg" data-toggle="lightbox" data-gallery="example-gallery" data-max-width="600">
+                                            <img src="img/g-salad.jpg" class="img-gallery">
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="col-md-3">
+                                    <div class="zoom-hover">
+                                        <a href="img/g-liberty.jpg" data-toggle="lightbox" data-gallery="example-gallery" data-max-width="600">
+                                            <img src="img/g-liberty.jpg" class="img-gallery">
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="col-md-3">
+                                    <div class="zoom-hover">
+                                        <a href="img/g-shutterbug.jpg" data-toggle="lightbox" data-gallery="example-gallery" data-max-width="600">
+                                            <img src="img/g-shutterbug.jpg" class="img-gallery">
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="col-md-3">
+                                    <div class="zoom-hover">
+                                        <a href="img/g-woodcraft.jpg" data-toggle="lightbox" data-gallery="example-gallery" data-max-width="600">
+                                            <img src="img/g-woodcraft.jpg" class="img-gallery">
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="col-md-3">
+                                    <div class="zoom-hover">
+                                        <a href="img/blog1.png" data-toggle="lightbox" data-gallery="example-gallery" data-max-width="600">
+                                            <img src="img/blog1.png" class="img-gallery">
+                                        </a>
+                                    </div>
+                                </div>   
+                                <div class="col-md-3">
+                                    <div class="zoom-hover">
+                                        <a href="img/blog2.png" data-toggle="lightbox" data-gallery="example-gallery" data-max-width="600">
+                                            <img src="img/blog2.png" class="img-gallery">
+                                        </a>
+                                    </div>
                                 </div>   
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6" style="font-family: 'Comic Sans MS', cursive, sans-serif;">
+                    <div class="col-md-12" style="font-family: 'Comic Sans MS', cursive, sans-serif;">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="col-md-12">
-                                    <h2>Why You Must To Contact Us</h2>
+                                    <h2>Why Our Galleries Look Interesting For You</h2>
                                 </div>   
                                 <div class="col-md-12">
                                         <p>
@@ -384,4 +404,11 @@
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+    <script>
+        $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+            event.preventDefault();
+            $(this).ekkoLightbox();
+        });
+    </script>
 </html>
